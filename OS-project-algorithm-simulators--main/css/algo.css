@@ -1,0 +1,142 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }  
+
+  .web-7 {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgb(5 0 36), rgb(50 38 116)), #201f1f;
+    box-shadow: 30px 30px 200px rgba(0, 0, 0, 0.1);
+  }
+
+  #heading {
+    position: absolute;
+    left: 0.67%;
+    right: 94.01%;
+    top: -56.04%;
+    margin: 50px;
+    font-size: 25.8px;
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+  color: var(--color-black);
+    line-height: 84px;
+
+    color: #FFFFFF;
+}
+
+
+#heading a{
+    text-decoration: solid;
+    color: #ffffff;
+}
+
+.header {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 89.31%;
+
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+}
+
+.nav-items{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 27px;
+}
+
+.nav-items a {
+    text-decoration:solid;
+    color: rgb(255, 255, 255);
+    font-family: 'Commissioner';
+    font-weight: 200;
+}
+
+.nav-items li{
+    padding: 10px;
+    color: #FFFFFF;
+    animation: ease-in-out 4s;
+}
+
+.nav-items li :hover{
+    padding:5px;
+    text-align: center;
+    transition: 0.2s;
+    background-color: white;
+    color: rgb(37, 37, 63);
+    border: 2px solid rgb(37, 37, 63);
+    cursor: pointer;
+    border-radius: 13px;
+}
+.algo_box {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 600px;
+    animation-name:box1 ;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes box1 {
+    from{
+        height: 0%;
+        opacity: 0;
+    }
+    to{
+        height: 100%;
+        opacity: 1;
+    }
+}
+
+.Head{
+    color: white;
+    position: absolute;
+    left: 693px;
+    top: 139px;
+}
+
+.algo_box a{
+    text-decoration: none;
+    color: black; 
+}
+
+.algorithm-box {
+	background-color: #9cd9ff;
+    padding: 5px;
+    margin: 20px;
+    width: 300px;
+    height: 190px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 2px rgb(255 255 255 / 30%);
+    transition: all 0.3s ease-in-out;
+}
+
+.algorithm-box:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+.algorithm-box h2 {
+	font-size: 24px;
+	margin-bottom: 20px;
+}
+
+.algorithm-box p {
+	font-size: 16px;
+	line-height: 1.5;
+}

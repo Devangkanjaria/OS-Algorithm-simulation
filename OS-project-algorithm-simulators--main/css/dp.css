@@ -1,0 +1,183 @@
+body {
+  height: 747px;
+  background: linear-gradient(rgb(5 0 36), rgb(50 38 116)), #201f1f;
+  }  
+
+  .theory{
+    margin-top: 84px;
+    position: fixed;
+    right: 689px;
+    left: 86px;
+}
+
+  #heading {
+    position: absolute;
+    left: 0.67%;
+    right: 94.01%;
+    top: -40.04%;
+    margin: 50px;
+    font-size: 25.8px;
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+  color: var(--color-black);
+    line-height: 84px;
+
+    color: #ffffff;
+  }
+
+#heading a{
+    text-decoration: solid;
+    color: #ffffff;
+}
+
+.header {
+    position: fixed;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 89.31%;
+
+    /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+}
+
+.nav-items{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: row;
+    padding: 27px;
+}
+
+.nav-items a {
+    text-decoration:solid;
+    color: rgb(255, 255, 255);
+    font-family: 'Commissioner';
+    font-weight: 200;
+}
+
+.nav-items li{
+    padding: 10px;
+    color: #FFFFFF;
+    animation: ease-in-out 4s;
+}
+
+.nav-items li :hover{
+    padding:5px;
+    text-align: center;
+    transition: 0.2s;
+    background-color: white;
+    color: rgb(37, 37, 63);
+    border: 2px solid rgb(37, 37, 63);
+    cursor: pointer;
+    border-radius: 13px;
+}
+
+.heading_home{
+    position: absolute;
+    top: 163px;
+    left: 52px;
+    color: #0d0c58;
+    font-family: inherit;
+    font-weight: 900;
+    text-shadow: 4px 2px 4px #4a6bdb82;
+    font-size: 25px;
+  }
+
+  .heading {
+    font-size: 36px;
+    font-weight: 600;
+    color: #aad4ff;
+    text-transform: uppercase;
+    margin-bottom: -10px;
+  }
+  
+  .heading span {
+    color: #ff9e51;
+  }
+
+  .flow_chart{
+    position: absolute;
+    top: 46px;
+    left: 909px;
+    width: 386px;
+  }
+  
+  .text{
+    color: white;
+    font-size: 18px;
+    font-style: inherit;
+    text-shadow: 0 0 rgb(0, 0, 0);
+  }
+  
+  .text span {
+    color: #ffe678;
+    font-weight: bold;
+}
+  
+  .map_form_container {
+    position: absolute;
+  top: 698px;
+  left: 0px;
+  right: 0px;
+  background-color:#ffffff;;
+  padding: 2px 19px 2px 19px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 9px 0px #000000b8;
+  height: 659px;
+  }
+
+  .simulation{
+    padding: 20px;
+    font-weight: bold;
+    font-size: 50px;
+    padding-left: 0px;
+    color: #08113f;
+  }
+  
+  .dining_table{
+    position: absolute;
+    top: 103px;
+    left: 120px;
+    padding-bottom: 79px;
+  }
+  
+  #simulate{
+    position: absolute;
+    top: 348px;
+    left: 348px;
+    border-radius: 12px;
+    padding: 9px;
+  }
+  
+  /* Style for the label of each philosopher textbox */
+  label {
+    display: inline-block;
+    width: 120px;
+    text-align: right;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  /* Style for the input textbox of each philosopher */
+  input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style for the container div of each philosopher textbox */
+  div {
+    margin-bottom: 20px;
+  }
+  
+  .text_boxes{
+    position: absolute;
+    top: 239px;
+    left: 932px;
+  }
+
+

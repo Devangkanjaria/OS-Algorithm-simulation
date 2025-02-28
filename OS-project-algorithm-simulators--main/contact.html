@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
+    body {
+      margin: 0;
+      line-height: normal;
+      /* height: 200%; */
+    }
+
+    .web-7 {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: linear-gradient(rgb(5 0 36), rgb(50 38 116)), #201f1f;
+      box-shadow: 30px 30px 200px rgba(0, 0, 0, 0.1);
+    }
+
+    #heading {
+  position: absolute;
+  left: 0.67%;
+  right: 94.01%;
+  top: -40.04%;
+  margin: 50px;
+  font-size: 25.8px;
+  font-weight: 600;
+  font-family: var(--font-montserrat);
+  color: var(--color-black);
+  line-height: 84px;
+
+  color: #FFFFFF;
+}
+
+#heading a {
+  text-decoration: solid;
+  color: #ffffff;
+}
+
+.header {
+  position: fixed;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 89.31%;
+
+  /* border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px; */
+}
+
+.nav-items {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  padding: 27px;
+}
+
+.nav-items a {
+  text-decoration: solid;
+  color: rgb(255, 255, 255);
+  font-family: 'Commissioner';
+  font-weight: 200;
+}
+
+.nav-items li {
+  padding: 10px;
+  color: #FFFFFF;
+  animation: ease-in-out 4s;
+}
+
+.nav-items li :hover {
+  padding: 5px;
+  text-align: center;
+  transition: 0.2s;
+  background-color: white;
+  color: rgb(37, 37, 63);
+  border: 2px solid rgb(37, 37, 63);
+  cursor: pointer;
+  border-radius: 13px;
+}
+
+    .contact-form {
+      max-width: 600px;
+    margin: 25px 137px 50px 427px;
+    margin-top: 134px;
+    text-align: center;
+    }
+
+    .contact-form h2 {
+      color: rgb(224, 208, 251);
+      margin-left: 36px;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 30px;
+      text-align: left;
+      margin-left: -47;
+      width: 700px;
+    }
+
+    .form-group label {
+      color: rgb(226, 213, 249);
+      display: block;
+      margin-bottom: 5px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #4d4b4b;
+      border-radius: 4px;
+      font-size: 16px;
+      opacity: 50%;
+    }
+
+    .form-group textarea {
+      height: 150px;
+    }
+
+    button[type="submit"] {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 20px;
+      margin-left: 316px;
+      border: none;
+      border-radius: 4px;
+      font-size: 18px;
+      background-color: #491a96;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #3c4cb5;
+    }
+  </style>
+
+
+</head>
+
+
+<body>
+  <div class="web-7">
+    <div class="web-7-child">
+    </div>
+
+    <header class="header">
+      <h1 id="heading"><a href="home.html">OperatingSystem</a></h1>
+
+      <!-- nav -->
+      <ul class="nav-items">
+          <li class="head"><a href="home.html">Home</a></li>
+          <li class="algo"><a href="algo.html">Algorithm</a></li>
+          <li class="about"><a href="about.html">About us</a></li>
+          <li class="contact"><a href="contact.html">Contact Us</a></li>
+      </ul>
+  </header>
+    <form class="contact-form" action="/" method="post">
+      <h2>Contact Us</h2>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required  placeholder="email@gmail.com">
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required  placeholder="Enter some message"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>

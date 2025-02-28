@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SJF</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Chonburi&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/sjf.css" />
+</head>
+
+<body>
+  <div class="theory" id="theory">
+
+    <h2 class="heading">
+      <span>Shortest Job First</span>
+    </h2>
+    <br>
+    <div class="detail-box">
+      <p class="text">
+        <span>Shortest Job First(S.J.F): </span>Shortest Job First (SJF) is a CPU scheduling algorithm that selects the
+        process with the shortest burst time or execution time to be executed first. The basic idea behind this
+        algorithm is that shorter jobs are likely to finish before longer ones, resulting in faster overall processing
+        and turnaround times.<br><br>
+
+        There are two types of SJF algorithms:<br><br>
+
+        <span> Non-preemptive SJF:</span> In this algorithm, once a process is selected for execution, it continues until it finishes,
+        and the CPU is released.<br>
+
+        <span> Preemptive SJF:</span> In this algorithm, if a new process with a shorter burst time arrives, it interrupts the current
+        executing process and takes over the CPU. The interrupted process is put back into the ready queue to wait for
+        its next turn. <br><br>
+
+        One of the major advantages of SJF is that it has a minimal average waiting time, which means that processes
+        with shorter burst times will be executed sooner, resulting in less time spent waiting in the ready queue.
+        However, SJF can cause starvation for longer processes if shorter processes keep arriving, and it is difficult
+        to estimate the exact burst time for each process. <br>
+
+        To implement the SJF algorithm, the burst time for each process needs to be known beforehand. This can be
+        achieved by using historical data, such as the average burst time for a specific process or by estimating the
+        burst time based on the type of process. Additionally, the SJF algorithm can be used in conjunction with other
+        scheduling algorithms, such as Round Robin or Priority Scheduling, to achieve better results.
+      </p>
+      <img class="flow_chart" src="images/1.png" alt="">
+    </div>
+  </div>
+  <div class="map_form_container">
+    <div class="simulation">Simulation</div>
+    <div class="visualizer">
+      <div class="error">Invalid Input</div>
+      <div class="container">
+        <div>
+          <div class="buttons">
+            <div class="play">PLAY</div>
+            <div class="reset">RESET</div>
+          </div>
+
+          <div class="avg-tat">Average TAT : <span id="one">0</span></div>
+          <div class="avg-wt">Average WT : <span id="two">0</span></div>
+          <div class="avg-rt">Average RT : <span id="three">0</span></div>
+        </div>
+        <div>
+          <div class="add-process">
+            <div class="input">
+              <div class="arrival">
+                <label for="arrival-time"> Arrival Time :</label>
+                <input type="text" id="arrival-time" />
+              </div>
+
+              <div class="burst">
+                <label for="burst-time">Burst Time :</label>
+                <input type="text" id="brust-time" />
+              </div>
+            </div>
+            <div class="add">ADD</div>
+          </div>
+
+          <div class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>PID</th>
+                  <th>AT</th>
+                  <th>BT</th>
+                  <th>ST</th>
+                  <th>CT</th>
+                  <th>RT</th>
+                  <th>WT</th>
+                  <th>TAT</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="chart">
+      <table id="am">
+        <tr class="r" id="row1"></tr>
+        <tr class="r" id="row2"></tr>
+      </table>
+    </div>
+   
+  </div>
+  <header class="header">
+    <h1 id="heading"><a href="home.html">OperatingSystem</a></h1>
+
+    <!-- nav -->
+    <ul class="nav-items">
+      <li class="head"><a href="home.html">Home</a></li>
+      <li class="algo"><a href="algo.html">Algorithm</a></li>
+      <li class="about"><a href="about.html">About us</a></li>
+      <li class="contact"><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </header>
+  </div>
+  
+  <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/8.0.0/themes/dark_earth.min.js" type="text/javascript"></script>
+  <script src="js/sjf.js"></script>
+</body>
+
+</html>

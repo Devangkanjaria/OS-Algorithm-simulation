@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/dp.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One&display=swap">
+</head>
+
+<body>
+  <div class="theory" id="theory">
+
+    <h2 class="heading">
+      <span>Dining Philosophers Problem</span>
+    </h2>
+    <br>
+    <div class="detail-box">
+      <p class="text">
+        The Dining Philosopher Problem is a classic computer science problem that illustrates the challenges of
+        synchronization and resource allocation in a concurrent system. The problem involves a set of philosophers
+        sitting around a table, each with a plate of spaghetti and a fork on either side of them. The philosophers spend
+        their time either eating or thinking. To eat, a philosopher must have both forks, one on each side of their
+        plate. <br><br>
+
+        The challenge is to create a solution that ensures that no two philosophers will attempt to eat with the same
+        fork at the same time, which can lead to a deadlock where no philosopher can proceed with their meal. <br><br>
+
+        There are various solutions proposed for this problem, with the most common one being the use of a technique
+        called "resource allocation". This technique involves introducing a central authority that controls access to
+        the forks. The authority can be implemented using a mutex, semaphore or other synchronization primitives, and is
+        responsible for ensuring that a philosopher can only acquire both forks if they are available. <br><br>
+
+        Overall, there are many solutions to the Dining Philosopher Problem, each with their own advantages and
+        drawbacks. The optimal solution depends on the specific constraints and requirements of the system in question.
+      </p>
+      <img class="flow_chart" src="images/2.png" alt="">
+    </div>
+  </div>
+  <header class="header">
+
+    <h1 id="heading"><a href="home.html">OperatingSystem</a></h1>
+
+    <!-- nav -->
+    <ul class="nav-items">
+      <li class="head"><a href="home.html">Home</a></li>
+      <li class="algo"><a href="algo.html">Algorithm</a></li>
+      <li class="about"><a href="about.html">About us</a></li>
+      <li class="contact"><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </header>
+  <div class="map_form_container">
+    <div class="simulation">Simulation</div>
+    <img class="dining_table" src="images/dining_table.png">
+    <div class="text_boxes">
+
+      <div>
+        <label for="philosopher1">Philosopher 1:</label>
+        <input type="text" id="philosopher1" name="philosopher1" readonly>
+      </div>
+
+      <div>
+        <label for="philosopher2">Philosopher 2:</label>
+        <input type="text" id="philosopher2" name="philosopher2" readonly>
+      </div>
+
+      <div>
+        <label for="philosopher3">Philosopher 3:</label>
+        <input type="text" id="philosopher3" name="philosopher3" readonly>
+      </div>
+
+      <div>
+        <label for="philosopher4">Philosopher 4:</label>
+        <input type="text" id="philosopher4" name="philosopher4" readonly>
+      </div>
+
+      <div>
+        <label for="philosopher5">Philosopher 5:</label>
+        <input type="text" id="philosopher5" name="philosopher5" readonly>
+      </div>
+    </div>
+
+    <main class="main-con">
+      <button id="simulate" onclick="eat()">Simulate</button>
+    </main>
+
+  </div>
+  <script src="js/dp.js" type="module"></script>
+</body>
+
+</html>

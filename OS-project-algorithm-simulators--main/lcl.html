@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/lcl.css">
+    <script src="https://cdn.plot.ly/plotly-2.18.2.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One&display=swap">
+</head>
+</head>
+
+<body>
+    <div class="animate">
+
+        <div class="theory" id="theory">
+
+            <h2 class="heading">
+              <span>Look/C-Look Disk Scheduling</span>
+            </h2>
+            <div class="detail-box">
+                <p class="text">
+                    <span>1. LOOK disk scheduling algorithm :</span>
+                    Look Algorithm is actually an improves version of SCAN Algorithm. In this algorithm, the head starts
+                    from first request at one side of disk and moves towards the other end by serving all requests in
+                    between. After reaching the last request of one end, the head reverse its direction and returns to first
+                    request, servicing all requests in between. Unlike SCAN, in this the head instead of going till last
+                    track, it goes till last request and then direction is changed.<br>
+                    
+                    <span>Example –</span><br>
+                    Consider a disk with 200 tracks (0-199) and the disk queue having I/O requests in the following order as
+                    follows: 98, 183, 40, 122, 10, 124, 65. The current head position of the Read/Write head is 53 and will
+                    move in Right direction . Calculate the total number of track movements of Read/Write head using LOOK
+                    algorithm.<br>
+                   
+                </p>
+                <p class="text">
+                    <span>2. C-LOOK disk scheduling algorithm :</span>
+                    C-LOOK is the modified version of both LOOK and SCAN algorithms. In this algorithm, the head starts from
+                    first request in one direction and moves towards the last request at other end, serving all request in
+                    between. After reaching last request in one end, the head jumps in other direction and move towards the
+                    remaining requests and then satisfies them in same direction as before. Unlike LOOK, it satisfies
+                    requests only in one direction.<br>
+                    
+                    <span>Example –</span><br>
+                    Consider a disk with 200 tracks (0-199) and the disk queue having I/O requests in the following order as
+                    follows: 98, 183, 40, 122, 10, 124, 65. The current head position of the Read/Write head is 53 and will
+                    move in Right direction . Calculate the total number of track movements of Read/Write head using C-LOOK
+                    algorithm. <br>
+                    <img class="img2" class="flow-chart" src="images/clook.jpg">
+                </p>
+                
+            </div>
+        </div>
+        
+        <div class="map_form_container" id="Stimulator" class="animate">
+            <div class="simulation">Simulation</div>
+            <div class="container1">
+            <div class="req_text"> 
+                <span class="block"> Request Queue: </span>
+                <span class="input-box"> [<span class="request-queue"></span></span> ]
+            </div>
+            <h4>Please enter queries ranging from 0 to 199</h4>
+            
+            <span><span class="block">Queries: </span><input type="number" id="number" required=""><button id="add"
+            onclick="inputQueries();">Add</button></span>
+            
+            <p id="Head_Section"><span class="block">Add head:</span> <input type="number" id="starting"><button
+                id="headbtn" onclick="addHead();">Add</button></p><span class="toalert"></span>
+                <p id="direc"><span class="block">Direction:</span> Right:&nbsp; <input type="radio" name="direction"
+                    id="right" checked="">&nbsp;&nbsp;&nbsp; Left:&nbsp;&nbsp;<input type="radio" name="direction"
+                    id="left">
+                </p>
+                <div class="buttons">
+
+                <button id="cal" onclick="LOOK();">Look</button>
+                <button id="clook" onclick="CLOOK();">C-Look</button>
+                <button class="reset"><a class="new" href="lcl.html">Reset</a></button>
+                <p class="time-seek toogle-class" id="time">The Total seek time is: <input type="number" id="output"
+                    disabled=""><button id="diagram" onclick="showGraph();">Show Graph</button></p>
+                </div>
+                
+                <div id="graph" class="Chart toogle-class"></div>
+            </div>
+            <div class="block-2 image">
+                <img src="./img/20220223_100915_0000.png" alt="" class="img-element">
+            </div>        </div>
+
+        <header class="header">
+            <h1 id="heading"><a href="home.html">OperatingSystem</a></h1>
+    
+            <!-- nav -->
+            <ul class="nav-items">
+                <li class="head"><a href="home.html">Home</a></li>
+                <li class="algo"><a href="algo.html">Algorithm</a></li>
+                <li class="about"><a href="about.html">About us</a></li>
+                <li class="contact"><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </header>
+    </div>
+        <rect class="nsewdrag drag cursor-pointer" data-subplot="xy" x="80" y="100" width="396" height="270"
+        style="fill: transparent; stroke-width: 0; pointer-events: all;"></rect>
+        <script src="js/lcl.js"></script>
+        
+</body>
+
+</html>

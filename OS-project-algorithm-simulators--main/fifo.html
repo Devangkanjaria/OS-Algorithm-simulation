@@ -1,0 +1,105 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Algorithms</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda+One&display=swap">
+    <link rel="stylesheet" href="css/fifo.css">
+
+</head>
+
+<body class="sub_page">
+    <header class="header">
+
+        <h1 id="heading"><a href="home.html">OperatingSystem</a></h1>
+
+        <!-- nav -->
+        <ul class="nav-items">
+            <li class="head"><a href="home.html">Home</a></li>
+            <li class="algo"><a href="algo.html">Algorithm</a></li>
+            <li class="about"><a href="about.html">About us</a></li>
+            <li class="contact"><a href="contact.html">Contact Us</a></li>
+        </ul>
+    </header>
+
+    <div class="theory" id="theory" >
+        
+        <h2 class="heading">
+            <span>First</span> In <span>First</span> Out
+        </h2>
+        <br>
+        <div class="detail-box">
+            <p class="text">
+                In an operating system that uses paging for memory management, a page replacement algorithm is needed to
+                decide which page needs to be replaced when a new page comes in.<br><br>
+
+                <span>Page Fault:</span> A page fault happens when a running program accesses a memory page that is
+                mapped
+                into the
+                virtual address space but not loaded in physical memory. Since actual physical memory is much smaller
+                than virtual memory, page faults happen. In case of a page fault, Operating System might have to replace
+                one of the existing pages with the newly needed page. Different page replacement algorithms suggest
+                different ways to decide which page to replace. The target for all algorithms is to reduce the number of
+                page faults.<br><br>
+
+
+                <span>First In First Out (FIFO): </span>This is a popular page replacement
+                algorithm in operating systems. The basic idea behind FIFO is that the page that has been in the memory
+                the longest should be the one to be replaced. In other words, the page that was brought into memory
+                first should be the first one to be replaced when the memory is full.
+
+                The implementation of the FIFO algorithm is quite simple. The operating system maintains a queue of
+                pages in the memory. Whenever a new page is brought into memory, it is added to the end of the queue.
+                When the memory is full and a new page needs to be brought in, the page at the front of the queue is
+                replaced.
+            </p>
+            <img class="flow_chart" src="images/fifo_chart.png" alt="">
+        </div>
+    </div>
+
+    <section>
+        <div class="map_form_container">
+            <div class="form_container">
+
+                <div class="simulation">Simulation</div>
+
+                <form action="" class="form">
+                    <div class="form-row_1">
+                        <div>
+                            <Span>Page Reference String:<input type="text" class="string"
+                                    placeholder="With spaces (1 2 3)" id="pages" oninput="validation(event)"
+                                    autocomplete="off"></Span>
+                        </div>
+                    </div>
+                    <div class="form-row_2">
+                        <div>
+                            <span>Number of Frames:<input type="number" class="frame" placeholder="Number of Frames"
+                                    id="frame" oninput="validation(event)" autocomplete="off"></span>
+                        </div>
+                    </div>
+                    <p class="page_fault"></p>
+                    <div class="btn">
+                    <button type="button" onclick="FIFO()">
+                        Run
+                    </button>
+                    <button type="button" onclick="window.location.reload();">
+                        Reset
+                    </button>
+                    </div>
+                </form>
+            </div>
+            <br>
+
+            <table id="table"></table>
+            <br>
+            <div id="output" style="margin-bottom: 20px"></div>
+        </div>
+    </section>
+
+    <script src="js/fifo.js"></script>
+
+</body>
+
+</html>
